@@ -1,0 +1,20 @@
+What is Curring ?
+
+Currying is when you break down a function that takes multiple arguments into a series of functions that take part of the arguments. Here's an example in JavaScript:
+
+function add (a, b) {
+  return a + b;
+}
+
+add(3, 4); // returns 7
+
+This is a function that takes two arguments, a and b, and returns their sum. We will now curry this function:
+
+function add (a) {
+  return function (b) {
+    return a + b;
+  }
+}
+
+In an algebra of functions, dealing with functions that take multiple arguments (or equivalent one argument that's an N-tuple) is somewhat inelegant. So how do you deal with something you'd naturally express as, say, f(x,y)? Well, you take that as equivalent to f(x)(y) - f(x), call it g, is a function, and you apply that function to y. In other words, you only have functions that take one argument - but some of those functions return other functions (which ALSO take one argument).
+
