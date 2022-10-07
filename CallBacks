@@ -1,9 +1,8 @@
-# What is call back function ?
+What is call back function ?
 
-# Defination
+
 A callback function can be passed as an argument in another function.
 
-# Exapmle
 const message = function(){
     console.log(“this function will be called after 3 sec”);
 }
